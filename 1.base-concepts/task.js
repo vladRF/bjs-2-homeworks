@@ -12,10 +12,15 @@ function solveEquation(a, b, c) {
     arr.push((-b - Math.sqrt(d)) / (2 * a));
   }
   return arr;
-}
+};
 
-//solveEquation(1, 2, 10);
 
-//function calculateTotalMortgage(percent, contribution, amount, countMonths) {
-//
-//}
+
+function calculateTotalMortgage(percent, contribution, amount, countMonths) {
+  let S = amount - contribution;
+  let P = percent / 12 / 100;
+  let monthlyPayment = S * (P + (P / (((1 + P) ** countMonths) - 1)));
+  let finalPayout = Number((monthlyPayment * countMonths).toFixed(2));
+  return finalPayout;
+};
+
