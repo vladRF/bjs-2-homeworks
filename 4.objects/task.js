@@ -13,8 +13,6 @@ Student.prototype.addMarks = function (...marks) {
   if (this.hasOwnProperty('marks')) {
     this.marks.push(...marks);
   }
-
-
 }
 
 Student.prototype.getAverage = function () {
@@ -29,5 +27,8 @@ Student.prototype.getAverage = function () {
 }
 
 Student.prototype.exclude = function (reason) {
-
+  delete this.marks;
+  delete this.subject;
+  this.excluded = reason;
 }
+
