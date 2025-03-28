@@ -10,15 +10,22 @@ Student.prototype.setSubject = function (subjectName) {
 }
 
 Student.prototype.addMarks = function (...marks) {
-  if (student1.hasOwnProperty('marks')) {
-    student1.marks.push(...marks);
+  if (this.hasOwnProperty('marks')) {
+    this.marks.push(...marks);
   }
 
 
 }
 
 Student.prototype.getAverage = function () {
-
+  if (this.hasOwnProperty('marks') && this.marks.length !== 0) {
+    let average = this.marks.reduce((accumulator, items) => {
+      return accumulator + items / this.marks.length;
+    }, 0)
+    return average;
+  } else {
+    return 0
+  }
 }
 
 Student.prototype.exclude = function (reason) {
