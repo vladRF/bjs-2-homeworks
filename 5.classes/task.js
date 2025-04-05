@@ -37,25 +37,12 @@ class Magazine extends PrintEditionItem {
 
 }
 
-
-
 class Book extends PrintEditionItem {
-    constructor(author, type){
-        super(author)
+    constructor(author, type) {
+        super(author, type)
         this.author = author
-
-        super(type)
         this.type = "book"
-    
-    
     }
-    
-    
+
 }
-
-let book = new Book;
-
-console.log(book);
-
-
 
