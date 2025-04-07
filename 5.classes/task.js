@@ -90,9 +90,18 @@ class Library {
     }
 
 
-    giveBookByName(bookName) {}
-
-
+    giveBookByName(bookName) {
+        const index = this.books.findIndex(book => book.name === bookName);
+        if (index !== -1) {
+            const book = this.books[index];
+            this.books.splice(index, 1);
+            return book;
+        } else {
+            return null;
+        }
     }
+}
+
+
 
 
