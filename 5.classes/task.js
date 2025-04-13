@@ -29,8 +29,8 @@ class PrintEditionItem {
 }
 
 class Magazine extends PrintEditionItem {
-    constructor(type) {
-        super(type);
+    constructor(name, releaseDate, pagesCount) {
+        super(name, releaseDate, pagesCount );
         this.type = "magazine"
     }
 
