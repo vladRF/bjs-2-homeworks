@@ -32,11 +32,11 @@ class Triangle {
 
     get perimeter() {
         let P = this.a + this.b + this.c;
-        return Number(P);
+        return P;
     }
 
     get area() {
-        let semiperimeter = 0.5(this.a + this.b + this.c);
+        let semiperimeter = 0.5 * (this.a + this.b + this.c);
 
         let S = Math.sqrt(semiperimeter * (semiperimeter - this.a) * (semiperimeter - this.b) * (semiperimeter - this.c));
 
@@ -45,4 +45,16 @@ class Triangle {
 
 
 }
+
+
+function getTriangle(a, b, c) {
+    this.a = a,
+        this.b = b,
+        this.c = c
+
+
+
+}
+
+
 
